@@ -1,0 +1,26 @@
+/* syling the body */
+body{
+
+}
+/* styling the input */
+input{
+    border: 1px solid rgb(109, 216, 2);
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* styling the button */
+button{
+    margin-top: 7.5px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    background-color: rgb(1, 182, 1);
+    color: whitesmoke;
+    font-weight: 750;
+    font-size: 1rem;
+    border: 2px transparent;
+    border-radius: 5px;
+
+}
