@@ -1,5 +1,6 @@
 /* syling the body */
 body{
+    min-width: 400px;
 
 }
 /* styling the input */
