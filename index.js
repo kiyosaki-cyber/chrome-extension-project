@@ -1,24 +1,27 @@
 let myLeads = []
 const inputEl = document.getElementById("input-el")
-const inputBtn = document.getElementById("button-el")
+const inputBtn = document.getElementById("input-btn")
+const deleteBtn =document.getElementById("delete-el")
 const ulEl = document.getElementById("ul-el")
-let fromLocalStorage =JSON.parse (localStorage.getItem("myLeads"))
-if ( fromLocalStorage){
-    myLeads = fromLocalStorage
+const leadsFromLocalStorage  = JSON.parse (localStorage.getItem("myLeads"))
+if (leadsFromLocalStorage ) {
+    myLeads = leadsFromLocalStorage
     renderLeads()
 }
-inputBtn.addEventListener("click",function buttonEl() {
-    "button clicked"
+inputBtn.addEventListener("click",function() {
     myLeads.push(inputEl.value)
-    inputEl.value = "  "
-    localStorage.setItem("myLeads ",JSON.stringify(myLeads))
+    inputEl.value = ""
+    localStorage.setItem("myLeads", JSON.stringify(myLeads))
     renderLeads()
 })
-
-
+deleteBtn.addEventListener("dblclick", function(){
+    localStorage.clear()
+    myLeads = []
+    renderLeads()
+})
 function  renderLeads(){
-   let listItems = " "
-    for (i = 0; i < myLeads.length; i+= 1){
+   let listItems = ""
+    for ( let i = 0; i < myLeads.length; i+= 1){
         listItems += 
         `
         <li>
