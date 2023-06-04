@@ -24,3 +24,16 @@ button{
     border-radius: 5px;
 
 }
+ul {
+    margin-top: 20px;
+    list-style: none;
+    padding-left: 0;
+}
+
+li {
+    margin-top: 5px;
+}
+
+a {
+    color: rgb(0, 201, 0);
+} 
